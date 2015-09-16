@@ -1,18 +1,1 @@
-architecture :
-	js
-		Componsants
-		scripts
-		->psehbb.js
-	media
-		img
-		video
-	style
-		->style.css
-		layout
-			->720p.css
-			->540p.css
-			->1080p.css
-	->index.php
-	->README
-	->INSTALL
-	->AUTHORS
+Application de diffusion par hbbtv de l'université virtuelle du Sénégal
