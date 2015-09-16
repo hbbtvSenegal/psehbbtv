@@ -1,0 +1,61 @@
+html {
+    height: 100%;
+}
+/*
+ * chargement de la page
+*/
+#static-loading-screen{height:100px;}
+#static-loading-screen .charg{margin-left:50%;margin-top:25%;}
+#static-loading-screen .charg div{width:6px;height:20px;background:white;border:1px solid black;float:left;margin-left:4px;
+-webkit-animation: article20 0.7s infinite linear;
+-moz-animation: article20 0.7s infinite linear;
+-o-animation: article20 0.7s infinite linear;
+animation: article20 0.7s infinite linear;
+}
+#static-loading-screen .charg div:first-child{
+-webkit-animation-delay:0s;
+-moz-animation-delay:0s;
+-o-animation-delay:0s;
+animation-delay:0s;
+}
+#static-loading-screen .charg div:nth-child(2){
+-webkit-animation-delay:0.1s;
+-moz-animation-delay:0.1s;
+-o-animation-delay:0.1s;
+animation-delay:0.1s;
+}
+#static-loading-screen .charg div:last-child{
+-webkit-animation-delay:0.2s;
+-moz-animation-delay:0.2s;
+-o-animation-delay:0.2s;
+animation-delay:0.2s;
+}
+@-webkit-keyframes article20{
+from{background:#09C;border:1px solid #006080;height:36px;margin-top:-8px;}
+70%{background:white;border:1px solid white;height:20px;margin-top:0px;}
+to{background:white;border:1px solid white;height:20px;margin-top:0px;}
+}
+@-moz-keyframes article20{
+from{background:#09C;border:1px solid #006080;height:36px;margin-top:-8px;}
+70%{background:white;border:1px solid white;height:20px;margin-top:0px;}
+to{background:white;border:1px solid white;height:20px;margin-top:0px;}
+}
+@-o-keyframes article20{
+from{background:#09C;border:1px solid #006080;height:36px;margin-top:-8px;}
+70%{background:white;border:1px solid white;height:20px;margin-top:0px;}
+to{background:white;border:1px solid white;height:20px;margin-top:0px;}
+}
+@keyframes article20{
+from{background:#09C;border:1px solid #006080;height:36px;margin-top:-8px;}
+70%{background:white;border:1px solid white;height:20px;margin-top:0px;}
+to{background:white;border:1px solid white;height:20px;margin-top:0px;}
+}
+/*
+ * fin de chargement de la page
+*/
+
+
+/* Display & Visibility Helpers */
+.display-none {
+    display: none !important;
+}
