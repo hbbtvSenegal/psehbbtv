@@ -59,3 +59,45 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
 .display-none {
     display: none !important;
 }
+
+
+/* 
+ * Les bouttons
+*/
+#menu{
+	width:100%;
+}
+#menuPrincipal{
+	width:100%;
+	margin-top:13%;
+	height:40%;
+}
+#menuPrincipal .button{
+	float: left;
+	border-radius: 3px;
+	font-family: "ComfortaaBold";
+	display: table-cell;
+	height: 30px;
+	padding: 20px 55px;
+	vertical-align: middle;
+	color: #5DF600;
+	text-decoration: none;
+	font-size: 1.7em;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    background:transparent linear-gradient(#003D7A, #0D1121) repeat scroll 0% 0%;
+}
+
+#menuPrincipal .buttonFocussed {
+    background: #444444;
+     background: -webkit-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);
+     background: -moz-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);
+     background: -o-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);
+     background: linear-gradient(to right,#222,#555 5%,#555 95%,#222 100%);
+     color: #fff;
+}
+
+
+.background-none {
+    background-image: none !important;
+    background-color: transparent !important;
+}
