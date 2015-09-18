@@ -1,1 +1,6 @@
 Application de diffusion par hbbtv de l'université virtuelle du Sénégal
+Pour l'installation, vous pouvez soit téléchargé le dossier soit cloné le dépot et ensuite cloner le framework de TAL
+git clone https://github.com/hbbtvSenegal/psehbbtv.git psehbbtv 
+cd psehbbtv
+git clone https://github.com/fmtvp/tal.git antie
+
