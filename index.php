@@ -45,7 +45,7 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
         var require = {
             baseUrl: "",
             paths: {
-                <?php echo $application_id; ?>: 'js',
+                <?php echo $application_id; ?>: './js',
                 antie : "antie/static/script"
             },
             priority: [],
@@ -59,7 +59,7 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
     <!-- Load require.js -->
     <script type="text/javascript" src="antie/static/script/lib/require.js"></script>
     <!-- Load application base style sheet -->
-    <link rel="stylesheet" href="static/style/style.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
     <!-- Expose device config to framework -->
     <script>
         var antie = {
@@ -82,7 +82,11 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
 
 <!-- Create a loading message -->
 <div id="static-loading-screen" style="position: absolute; width: 100%; height: 100%; background: #000;">
-    Application is loading...
+    <div class="charg">
+     <div></div>
+     <div></div>
+     <div></div>
+     </div>
 </div>
 
 <!-- Create a div to house the app -->
@@ -92,9 +96,9 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
 <script type='text/javascript'>
     require(
             [
-                'sampleapp/appui/sampleapp'
+                'psehbb/appui/psehbb'
             ],
-            function(SampleApp) {
+            function(PseHbb) {
 
                 require.ready(function() {
                     function onReady() {
@@ -102,10 +106,10 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
                         staticLoadingScreen.parentNode.removeChild(staticLoadingScreen);
                     };
 
-                    new SampleApp(
+                    new PseHbb(
                             document.getElementById('app'),
-                            'static/style/',
-                            'static/img/',
+                            'style/',
+                            'media/img/',
                             onReady
                     );
                 });

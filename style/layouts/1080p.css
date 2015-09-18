@@ -1,0 +1,9 @@
+#app {
+    position: relative;
+    overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+    top: 50%;
+    margin: -360px auto 0 auto;
+    background-image: url(../../media/img/fond.jpg);
+}

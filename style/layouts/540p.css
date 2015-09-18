@@ -1,0 +1,11 @@
+#app {
+    position: relative;
+    overflow: hidden;
+    width: 960px;
+    height: 540px;
+    top: 50%;
+    margin: -270px auto 0 auto;
+    background-image: url(../../media/img/fond.jpg);
+    background-repeat: no-repeat;
+    background-color: red;
+}
