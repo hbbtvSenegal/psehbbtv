@@ -11,7 +11,7 @@ require.def("psehbb/appui/composants/carouselmenu",
         "antie/widgets/carousel/strips/cullingstrip",
         "antie/widgets/carousel/strips/hidingstrip"
     ],
-    function (Component,DataSource,Label,Carousel,Binder,ActivateFirstHandler,WrappingStrip,WrappingNavigator,CullingStrip,HidingStrip) {
+    function (Component, DataSource, Label, Carousel, Binder, ActivateFirstHandler, WrappingStrip, WrappingNavigator, CullingStrip, HidingStrip) {
         'use strict';
 		
 		//~ cette Fonction permet d'associer pour chaque evenement à une fonction callback

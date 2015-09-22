@@ -1,4 +1,4 @@
-require.def("psehbb/appui/data/boutonprincipal",
+require.def("psehbb/appui/data/bouton",
     [
         "antie/class"
     ],

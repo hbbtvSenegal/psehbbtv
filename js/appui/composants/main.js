@@ -18,8 +18,8 @@ require.def('psehbb/appui/composants/main',
 		
 		init:function(){
 			this._super('main');
-			this._application = this.getCurrentApplication();
-			this._device = this._application.getDevice();
+			//~ this._application = this.getCurrentApplication();
+			//~ this._device = this._application.getDevice();
 			var sef=this;
 			var menuPrincipal, menuSecondaire, carouselMenu, Menu;
 			menuPrincipal=new HorizontalList('menuPrincipal');

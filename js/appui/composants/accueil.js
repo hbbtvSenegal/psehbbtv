@@ -2,7 +2,7 @@
  * Ce fichier est le premier composant de  notre application 
  * */ 
 
-require.def('psehbb/appui/composants/main', 
+require.def('psehbb/appui/composants/accueil', 
 	[
 		"antie/widgets/component",
         "antie/datasource",
