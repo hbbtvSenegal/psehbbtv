@@ -25,7 +25,7 @@ require.def('psehbb/appui/psehbb',
             run: function() {
                 // Called from run() as we need the framework to be ready beforehand.
                 this._setRootContainer();
-                this.addComponentContainer("maincontainer", "psehbb/appui/composants/main");
+                this.addComponentContainer("maincontainer", "psehbb/appui/composants/accueil");
             }
         });
     }

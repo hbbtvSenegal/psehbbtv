@@ -58,18 +58,27 @@ require.def('psehbb/appui/composants/main',
 					'kama': new Button('kama')
 				};
 			
-			
+			tabBtnCours['Anglais'].appendChildWidget(new Label('Anglais'));
+					menuSecondaire.appendChildWidget(tabBtnCours['Anglais']);
+					tabBtnCours['Francais'].appendChildWidget(new Label('Fancais'));
+					menuSecondaire.appendChildWidget(tabBtnCours['Francais']);
+					tabBtnCours['Physique'].appendChildWidget(new Label('Physique'));
+					menuSecondaire.appendChildWidget(tabBtnCours['Physique']);
+					tabBtnCours['Electronique'].appendChildWidget(new Label('Electronique'));
+					menuSecondaire.appendChildWidget(tabBtnCours['Electronique']);
+					tabBtnCours['Droits'].appendChildWidget(new Label('Droits'));
+					menuSecondaire.appendChildWidget(tabBtnCours['Droits']);
 			btnCours=new Button('btnCours');
 			btnCours.appendChildWidget(new Label('Cours'));
-			btnCours.addEventListener('focus', function(evt){
+			
+			btnDivertissement=new Button('btnDivertissment');
+			btnDivertissement.appendChildWidget(new Label('Divertissements'));
+			btnDivertissement.addEventListener('focus', function(evt){
 					if(menuSecondaire.getChildWidgets()!=null){
 						menuSecondaire.removeChildWidgets();
 					}
-					
 				}
 			);
-			btnDivertissement=new Button('btnDivertissment');
-			btnDivertissement.appendChildWidget(new Label('Divertissements'));
 			
 			btnInfos=new Button('btnInfoss');
 			btnInfos.appendChildWidget(new Label('Informations'));
