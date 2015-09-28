@@ -12,59 +12,57 @@ require.def('psehbb/appui/composants/accueil',
         "antie/widgets/label", 
         "antie/widgets/button",
         "antie/widgets/carousel",
-        "antie/datasource",
         "psehbb/appui/format/boutonformat",
         "psehbb/appui/data/bouton",
-        "psehbb/appui/composants/carouselmenu"
-        
+        "psehbb/appui/data/boutoncours"
+        //~ "psehbb/appui/data/boutoneno",
+        //~ "psehbb/appui/data/boutoninfo",
+        //~ "psehbb/appui/data/boutonpresentation",
+        //~ "psehbb/appui/data/boutonuniversite",
+        //~ "psehbb/appui/data/boutondivertissement"
+       
 	],
-	function (Component, DataSource, HorizontalCarousel,VerticalList, HorizontalList, Label, Button,Carousel, DataSource, BoutonFormat, Bouton, CarouselMenu){
+	function (
+	Component, 
+	DataSource, 
+	HorizontalCarousel,
+	VerticalList, 
+	HorizontalList, 
+	Label, 
+	Button,
+	Carousel, 
+	BoutonFormat, 
+	Bouton,
+	BoutonCours
+	)
+	{
 	
 	return Component.extend({
 		
 		init:function(){
 			this._super('main');
-			this._application = this.getCurrentApplication();
-			this._device = this._application.getDevice();
 			var sef=this;
-			var menuPrincipal, menuSecondaire, carouselMenu, Menu;
-			menuPrincipal=new CarouselMenu(this._getCarouselConfig());
-			menu=new VerticalList('menu');
-			menu.appendChildWidget(menuPrincipal);
-			//~ this.appendChildWidget(menuPrincipal);
-			this.appendChildWidget(menu);
-			this.addEventListener("beforerender", function (evt) {
-				self._onBeforeRender(evt);
-             });
-             
-			//~ this.addEventListener("aftershow", function appReady(evt) {
-			//~ self.getCurrentApplication().ready();
-			//~ self.removeEventListener('aftershow', appReady);
-			//~ });
-           },
+			var courSource=new DataSource(this, new BoutonCours(), "loadData");
+			this._dataSource = new DataSource(this, new Bouton(), "loadData");
+			this._menuPrincipal = new HorizontalCarousel("menuPrincipal", new BoutonFormat());
+			this._menuSecondaire= new HorizontalCarousel("menuSecondaire", new BoutonFormat());
+			 //~ On change ici le mode de navigation. Pour avoir un mode de navigation continue, il faut décommenter la ligne suivante ou bien
+			 //~ remplacer le paramètre par HorizontalCarousel.WRAP_MODE_VISUAL
+			this._menuPrincipal.setWrapMode(HorizontalCarousel.WRAP_MODE_NAVIGATION_ONLY );
+			//~ On ajoute le menuprincipal dans une liste verticale
+			this._menu=new VerticalList('menu');
+			this._menu.appendChildWidget(this._menuPrincipal);
+			this._menu.appendChildWidget(this._menuSecondaire);
+			this.appendChildWidget(this._menu);
+			
+			//~ On ajoute les données attachées au menuprincipal
+			 this._menuPrincipal.setDataSource(this._dataSource);
+			//~ if(this._menuPrincipal.getSelectedChildWidgetIndex()=>1)
+			this._menuSecondaire.setDataSource(courSource);
+			
 
-            _getCarouselConfig: function () {
-                return {
-                    description: "Carousel example, LEFT and RIGHT to navigate, SELECT to go back",
-                    dataSource: new DataSource(null, new Bouton(), 'loadData'),
-                    formatter: new BoutonFormat(),
-                    orientation: Carousel.orientations.HORIZONTAL,
-                    carouselId: 'verticalCullingCarousel',
-                    animOptions: {
-                        skipAnim: false
-                    },
-                    alignment: {
-                        normalisedAlignPoint: 0.5,
-                        normalisedWidgetAlignPoint: 0.5
-                    },
-                    initialItem: 4,
-                    type: "CULLING",
-                    lengths: 264
-                };
-            },
-
-            _onBeforeRender: function () {
-            }
+           }
+            
 	});
 	
 	}
