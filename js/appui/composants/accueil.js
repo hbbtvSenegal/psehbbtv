@@ -14,7 +14,7 @@ require.def('psehbb/appui/composants/accueil',
         "antie/widgets/carousel",
         "psehbb/appui/format/boutonformat",
         "psehbb/appui/data/bouton",
-        "psehbb/appui/data/format"
+        "psehbb/appui/format/format"
         //~ "psehbb/appui/data/boutoneno",
         //~ "psehbb/appui/data/boutoninfo",
         //~ "psehbb/appui/data/boutonpresentation",

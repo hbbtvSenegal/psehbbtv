@@ -1,4 +1,4 @@
-require.def("psehbb/appui/data/format",
+require.def("psehbb/appui/format/format",
     [
         "antie/formatter",
         "antie/widgets/label",
