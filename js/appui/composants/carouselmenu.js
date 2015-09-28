@@ -6,6 +6,7 @@ require.def("psehbb/appui/composants/carouselmenu",
         "antie/widgets/carousel",
         "antie/widgets/carousel/binder",
         "antie/widgets/carousel/keyhandlers/activatefirsthandler",
+        
         "antie/widgets/carousel/strips/wrappingstrip",
         "antie/widgets/carousel/navigators/wrappingnavigator",
         "antie/widgets/carousel/strips/cullingstrip",

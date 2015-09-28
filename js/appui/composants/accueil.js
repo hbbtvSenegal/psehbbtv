@@ -14,7 +14,7 @@ require.def('psehbb/appui/composants/accueil',
         "antie/widgets/carousel",
         "psehbb/appui/format/boutonformat",
         "psehbb/appui/data/bouton",
-        "psehbb/appui/data/boutoncours"
+        "psehbb/appui/data/format"
         //~ "psehbb/appui/data/boutoneno",
         //~ "psehbb/appui/data/boutoninfo",
         //~ "psehbb/appui/data/boutonpresentation",
@@ -33,7 +33,7 @@ require.def('psehbb/appui/composants/accueil',
 	Carousel, 
 	BoutonFormat, 
 	Bouton,
-	BoutonCours
+	Format
 	)
 	{
 	
@@ -42,10 +42,10 @@ require.def('psehbb/appui/composants/accueil',
 		init:function(){
 			this._super('main');
 			var sef=this;
-			var courSource=new DataSource(this, new BoutonCours(), "loadData");
+			//~ var courSource=new DataSource(this, new BoutonCours(), "loadData");
 			this._dataSource = new DataSource(this, new Bouton(), "loadData");
-			this._menuPrincipal = new HorizontalCarousel("menuPrincipal", new BoutonFormat());
 			this._menuSecondaire= new HorizontalCarousel("menuSecondaire", new BoutonFormat());
+			this._menuPrincipal = new HorizontalCarousel("menuPrincipal", new Format(this, this._menuSecondaire));
 			 //~ On change ici le mode de navigation. Pour avoir un mode de navigation continue, il faut décommenter la ligne suivante ou bien
 			 //~ remplacer le paramètre par HorizontalCarousel.WRAP_MODE_VISUAL
 			this._menuPrincipal.setWrapMode(HorizontalCarousel.WRAP_MODE_NAVIGATION_ONLY );
@@ -58,7 +58,7 @@ require.def('psehbb/appui/composants/accueil',
 			//~ On ajoute les données attachées au menuprincipal
 			 this._menuPrincipal.setDataSource(this._dataSource);
 			//~ if(this._menuPrincipal.getSelectedChildWidgetIndex()=>1)
-			this._menuSecondaire.setDataSource(courSource);
+			//~ this._menuSecondaire.setDataSource(courSource);
 			
 
            }

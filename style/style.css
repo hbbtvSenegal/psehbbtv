@@ -1,6 +1,64 @@
+
 html {
     height: 100%;
 }
+
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", sans-serif;
+    font-weight: lighter;
+    color: #d4d4d4;
+    /*background-color: #1d1d1d; */
+}
+
+object {
+    position: absolute;
+}
+
+/* List widgets */
+.horizontallist, .verticallist {
+    position: relative;
+}
+
+.horizontallist .listitem {
+    display: inline-block;
+}
+
+/* nested lists - use #IDs instead for more complex layouts */
+.verticallist .horizontallist .listitem {
+    display: inline-block;
+}
+
+.verticallist .listitem {
+    display: block;
+    position: relative;
+}
+
+/* nested lists - use #IDs instead for more complex layouts */
+.horizontallist .verticallist .listitem {
+    display: block;
+}
+
+/* Horizontal carousel widgets */
+/* the mask is the top level of the carousel and defines where it is displayed and how much is visible */
+.horizontallistmask {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* ensure nested carousels have correct formatting, you may need to target IDs in complex layouts */
+.horizontallistmask .horizontallist .listitem {
+    display: inline-block;
+}
+
+.horizontalcarousel {
+    width: 99999px; /* needs to be big enough so carousel plus clones do not flow onto more then one line */
+}
+
+
 /*
  * chargement de la page
 */
@@ -68,17 +126,19 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
 	width:100%;
 }
 #menuPrincipal{
-	width:100%;
-	margin-top:13%;
-	height:40%;
+	margin-top:10%;
 }
-#menuPrincipal .button{
+
+#menuPrincipal .button,
+#menuSecondaire .button{
+/*
 	float: left;
-	border-radius: 3px;
+*/
+	border-radius: 3.5px;
 	font-family: "ComfortaaBold";
 	display: table-cell;
 	height: 30px;
-	padding: 20px 55px;
+	padding: 15px 65px;
 	vertical-align: middle;
 	color: #5DF600;
 	text-decoration: none;
@@ -87,7 +147,8 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
     background:transparent linear-gradient(#003D7A, #0D1121) repeat scroll 0% 0%;
 }
 
-#menuPrincipal .buttonFocussed {
+#menuPrincipal .buttonFocussed,
+#menuSecondaire .buttonFocussed {
     background: #444444;
      background: -webkit-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);
      background: -moz-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);

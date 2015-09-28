@@ -9,36 +9,44 @@ require.def("psehbb/appui/data/bouton",
                     [
                         {
                             "id":"1",
-                            "title":"Cours"
+                            "title":"Cours",
+                            "src": "cours"
                         },
                         {
                             "id":"2",
-                            "title":"Divertissements"
+                            "title":"Divertissements",
+                            "src":"divertissements"
                         },
                         {
                             "id":"3",
-                            "title":"Presentations"
+                            "title":"Presentations",
+                            "src":"presentations"
                         },
                         {
                             "id":"4",
-                            "title":"Théses"
+                            "title":"Théses",
+                            "src":"theses",
                         },
                         {
                             "id":"5",
-                            "title":"Informations"
+                            "title":"Informations",
+                            "src":"informations"
                         },
                         {
                             "id":"6",
-                            "title":"Universités"
+                            "title":"Universités",
+                            "src":"universites"
                         },
                         {
                             "id":"7",
                             "title":"Les ENO",
+                            "src":"eno"
                            
                         },
                         {
                             "id":"8",
-                            "title":"A propos"
+                            "title":"A propos",
+                            "src":"apropos"
                            
                         }
                     ]
