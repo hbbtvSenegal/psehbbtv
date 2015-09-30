@@ -1,12 +1,12 @@
-require.def("psehbb/appui/format/format",
+ require.def("psehbb/appui/format/formatsecond",
     [
         "antie/formatter",
         "antie/widgets/label",
         "antie/widgets/button", 
         "antie/datasource",
-        "psehbb/appui/data/boutonsource"
+        "psehbb/appui/data/bouton"
     ],
-    function(Formatter, Label, Button, DataSource, BoutonSource) {
+    function(Formatter, Label, Button, DataSource, Bouton) {
         return Formatter.extend({
 			
 			init:function(comp, secondComposant){
@@ -18,14 +18,14 @@ require.def("psehbb/appui/format/format",
                 var button, item;
                 var self=this;
                 item = iterator.next();
-                button = new Button("menuprincipal_" + item.id);
+                button = new Button("menusecondaire_" + item.id);
                 button.appendChildWidget(new Label(item.title));
-                //~ if(item.i!=8)
                 button.addEventListener('focus', function(){
-					self._secondaire.setDataSource(new DataSource(self.comp, new BoutonSource(), item.src));
+					self._secondaire.setDataSource(new DataSource(self.comp, new Bouton(), "loadData"));
 				});
                 return button;
             }
         });
     }
 );
+

@@ -14,7 +14,8 @@ require.def('psehbb/appui/composants/accueil',
         "antie/widgets/carousel",
         "psehbb/appui/format/boutonformat",
         "psehbb/appui/data/bouton",
-        "psehbb/appui/format/format"
+        "psehbb/appui/format/format",
+        "psehbb/appui/format/formatsecond"
         //~ "psehbb/appui/data/boutoneno",
         //~ "psehbb/appui/data/boutoninfo",
         //~ "psehbb/appui/data/boutonpresentation",
@@ -33,7 +34,8 @@ require.def('psehbb/appui/composants/accueil',
 	Carousel, 
 	BoutonFormat, 
 	Bouton,
-	Format
+	Format,
+	FormatSecond
 	)
 	{
 	
@@ -44,7 +46,8 @@ require.def('psehbb/appui/composants/accueil',
 			var sef=this;
 			//~ var courSource=new DataSource(this, new BoutonCours(), "loadData");
 			this._dataSource = new DataSource(this, new Bouton(), "loadData");
-			this._menuSecondaire= new HorizontalCarousel("menuSecondaire", new BoutonFormat());
+			this._menuDonnees= new HorizontalCarousel("menuDonnees", new BoutonFormat());
+			this._menuSecondaire= new HorizontalCarousel("menuSecondaire", new FormatSecond(this, this._menuDonnees));
 			this._menuPrincipal = new HorizontalCarousel("menuPrincipal", new Format(this, this._menuSecondaire));
 			 //~ On change ici le mode de navigation. Pour avoir un mode de navigation continue, il faut décommenter la ligne suivante ou bien
 			 //~ remplacer le paramètre par HorizontalCarousel.WRAP_MODE_VISUAL
@@ -53,6 +56,7 @@ require.def('psehbb/appui/composants/accueil',
 			this._menu=new VerticalList('menu');
 			this._menu.appendChildWidget(this._menuPrincipal);
 			this._menu.appendChildWidget(this._menuSecondaire);
+			this._menu.appendChildWidget(this._menuDonnees);
 			this.appendChildWidget(this._menu);
 			
 			//~ On ajoute les données attachées au menuprincipal

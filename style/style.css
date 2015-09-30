@@ -126,8 +126,9 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
 	width:100%;
 }
 #menuPrincipal{
-	margin-top:10%;
+	margin-top:5%;
 }
+
 
 #menuPrincipal .button,
 #menuSecondaire .button{
@@ -146,8 +147,25 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     background:transparent linear-gradient(#003D7A, #0D1121) repeat scroll 0% 0%;
 }
+#menuDonnees .button{
+/*
+	float: left;
+*/
+	border-radius: 3.5px;
+	font-family: "ComfortaaBold";
+	display: table-cell;
+	height: 340px;
+	padding: 15px 65px;
+	vertical-align: middle;
+	color: #5DF600;
+	text-decoration: none;
+	font-size: 1.7em;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    background:transparent linear-gradient(#003D7A, #0D1121) repeat scroll 0% 0%;
+}
 
 #menuPrincipal .buttonFocussed,
+#menuDonnees .buttonFocussed,
 #menuSecondaire .buttonFocussed {
     background: #444444;
      background: -webkit-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);

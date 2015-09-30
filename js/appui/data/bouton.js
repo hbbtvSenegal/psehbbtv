@@ -1,13 +1,15 @@
 require.def("psehbb/appui/data/bouton",
     [
-        "antie/class"
+        "antie/class",
+        
     ],
     function(Class) {
         return Class.extend({
             loadData : function(callbacks) {
                 callbacks.onSuccess(
                     [
-                        {
+                    
+						                 {
                             "id":"1",
                             "title":"Cours",
                             "src": "cours"
@@ -49,6 +51,7 @@ require.def("psehbb/appui/data/bouton",
                             "src":"apropos"
                            
                         }
+ 
                     ]
                 );
             }

@@ -9,7 +9,7 @@ require.def("psehbb/appui/data/boutonsource",
                     [
                         {
                             "id":"1",
-                            "title":"Anglais"
+                            "title":"Réseaux"
                         },
                         {
                             "id":"2",
@@ -17,7 +17,7 @@ require.def("psehbb/appui/data/boutonsource",
                         },
                         {
                             "id":"3",
-                            "title":"Droits"
+                            "title":"Anglais"
                         },
                         {
                             "id":"4",
