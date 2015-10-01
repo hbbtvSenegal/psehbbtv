@@ -4,9 +4,9 @@
         "antie/widgets/label",
         "antie/widgets/button", 
         "antie/datasource",
-        "psehbb/appui/data/bouton"
+        "psehbb/appui/data/cours"
     ],
-    function(Formatter, Label, Button, DataSource, Bouton) {
+    function(Formatter, Label, Button, DataSource, Cours) {
         return Formatter.extend({
 			
 			init:function(comp, secondComposant){
@@ -21,7 +21,7 @@
                 button = new Button("menusecondaire_" + item.id);
                 button.appendChildWidget(new Label(item.title));
                 button.addEventListener('focus', function(){
-					self._secondaire.setDataSource(new DataSource(self.comp, new Bouton(), "loadData"));
+					self._secondaire.setDataSource(new DataSource(self.comp, new Cours(), 'rx'));
 				});
                 return button;
             }

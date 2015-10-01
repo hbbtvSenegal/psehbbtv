@@ -9,36 +9,44 @@ require.def("psehbb/appui/data/boutonsource",
                     [
                         {
                             "id":"1",
-                            "title":"Réseaux"
+                            "title":"Réseaux",
+                            "idCour": "rx"
                         },
                         {
                             "id":"2",
-                            "title":"Français"
+                            "title":"Français",
+                            "idCour": "rx"
                         },
                         {
                             "id":"3",
-                            "title":"Anglais"
+                            "title":"Anglais",
+                            "idCour": "rx"
                         },
                         {
                             "id":"4",
-                            "title":"Electronique"
+                            "title":"Electronique",
+                            "idCour": "rx"
                         },
                         {
                             "id":"5",
-                            "title":"Mathématiques"
+                            "title":"Mathématiques",
+                            "idCour": "rx"
                         },
                         {
                             "id":"6",
-                            "title":"Sciences Eco"
+                            "title":"Sciences Eco",
+                            "idCour": "rx"
                         },
                         {
                             "id":"7",
                             "title":"Economie",
+                            "idCour": "rx"
                            
                         },
                         {
                             "id":"8",
-                            "title":"Informatique"
+                            "title":"Informatique",
+                            "idCour": "rx"
                            
                         }
                     ]

@@ -20,7 +20,6 @@ require.def("psehbb/appui/format/format",
                 item = iterator.next();
                 button = new Button("menuprincipal_" + item.id);
                 button.appendChildWidget(new Label(item.title));
-                //~ if(item.i!=8)
                 button.addEventListener('focus', function(){
 					self._secondaire.setDataSource(new DataSource(self.comp, new BoutonSource(), item.src));
 				});

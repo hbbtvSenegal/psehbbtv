@@ -180,3 +180,13 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
     background-image: none !important;
     background-color: transparent !important;
 }
+
+#menuDonnees .image {
+    left: 41px;
+    top: 0px;
+    background-position: 0px -20px;
+    background-image: url("../media/img/icons.png");
+    height: 143px;
+    width: 158px;
+}
+

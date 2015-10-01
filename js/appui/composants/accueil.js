@@ -46,7 +46,7 @@ require.def('psehbb/appui/composants/accueil',
 			var sef=this;
 			//~ var courSource=new DataSource(this, new BoutonCours(), "loadData");
 			this._dataSource = new DataSource(this, new Bouton(), "loadData");
-			this._menuDonnees= new HorizontalCarousel("menuDonnees", new BoutonFormat());
+			this._menuDonnees= new HorizontalCarousel("menuDonnees", new BoutonFormat(this));
 			this._menuSecondaire= new HorizontalCarousel("menuSecondaire", new FormatSecond(this, this._menuDonnees));
 			this._menuPrincipal = new HorizontalCarousel("menuPrincipal", new Format(this, this._menuSecondaire));
 			 //~ On change ici le mode de navigation. Pour avoir un mode de navigation continue, il faut décommenter la ligne suivante ou bien
