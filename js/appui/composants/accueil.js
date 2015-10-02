@@ -44,11 +44,13 @@ require.def('psehbb/appui/composants/accueil',
 		init:function(){
 			this._super('main');
 			var sef=this;
+			this._application=this.getCurrentApplication();
 			//~ var courSource=new DataSource(this, new BoutonCours(), "loadData");
 			this._dataSource = new DataSource(this, new Bouton(), "loadData");
-			this._menuDonnees= new HorizontalCarousel("menuDonnees", new BoutonFormat(this));
-			this._menuSecondaire= new HorizontalCarousel("menuSecondaire", new FormatSecond(this, this._menuDonnees));
-			this._menuPrincipal = new HorizontalCarousel("menuPrincipal", new Format(this, this._menuSecondaire));
+			
+			this._menuDonnees= new HorizontalCarousel("menuDonnees", new BoutonFormat(this._application));
+			this._menuSecondaire= new HorizontalCarousel("menuSecondaire", new FormatSecond(this._application, this._menuDonnees));
+			this._menuPrincipal = new HorizontalCarousel("menuPrincipal", new Format(this._application, this._menuSecondaire));
 			 //~ On change ici le mode de navigation. Pour avoir un mode de navigation continue, il faut décommenter la ligne suivante ou bien
 			 //~ remplacer le paramètre par HorizontalCarousel.WRAP_MODE_VISUAL
 			this._menuPrincipal.setWrapMode(HorizontalCarousel.WRAP_MODE_NAVIGATION_ONLY );

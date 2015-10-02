@@ -26,6 +26,7 @@ require.def('psehbb/appui/psehbb',
                 // Called from run() as we need the framework to be ready beforehand.
                 this._setRootContainer();
                 this.addComponentContainer("maincontainer", "psehbb/appui/composants/accueil");
+                //~ this.addComponentContainer("maincontainer", 'psehbb/appui/composants/descritions', {desc: 'bla bla bla bla bla bla', img: 'media/img/fond.jpg'});
             }
         });
     }

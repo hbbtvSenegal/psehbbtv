@@ -130,8 +130,7 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
 }
 
 
-#menuPrincipal .button,
-#menuSecondaire .button{
+.button{
 /*
 	float: left;
 */
@@ -166,7 +165,7 @@ to{background:white;border:1px solid white;height:20px;margin-top:0px;}
 
 #menuPrincipal .buttonFocussed,
 #menuDonnees .buttonFocussed,
-#menuSecondaire .buttonFocussed {
+#menuSecondaire .buttonFocussed, .buttonFocussed {
     background: #444444;
      background: -webkit-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);
      background: -moz-linear-gradient(left,#222,#555 5%,#555 95%,#222 100%);
